@@ -1,0 +1,136 @@
+/* ===== Base Styles ===== */
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #9ECAD6, #f8faff); /* warna utama lama diganti ke biru muda */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+/* ===== Visibility Controls ===== */
+#desktop {
+    display: block;
+}
+
+#mobile {
+    display: none;
+}
+
+/* ===== Menu Container ===== */
+.menus {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0 15px;
+}
+
+/* ===== Menu Items ===== */
+.menus .data {
+    flex: 1 1 220px;
+    max-width: 600px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    border-radius: 14px;
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+.menus .data:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(116, 141, 174, 0.3); /* warna hover baru */
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(116, 141, 174, 0.6);
+}
+
+/* ===== Menu Text ===== */
+.menus .data p {
+    font-size: 18px;
+    color: #2f3e53;
+    margin: 0;
+}
+
+.create {
+    width: 95%;
+    display: flex;
+    justify-content: right;
+}
+.create #buat {
+    background: #748DAE; /* warna utama baru */
+    color: #fff;
+}
+.create label input {
+    padding: 0 5px;
+    border: 1px solid #748DAE;
+    color: #748DAE;
+    border-radius: 5px;
+}
+.create #tambah {
+    background-color: #748DAE;
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* ===== Heading ===== */
+h1 {
+    margin-top: 25px;
+    width: 95%;
+    font-size: 24px;
+    font-weight: 700;
+    color: #748DAE; /* heading baru */
+    text-align: center;
+}
+
+/* ===== Table Wrapper ===== */
+.overflow-x-auto {
+    margin-top: 15px;
+    width: 95%;
+    overflow-x: auto;
+}
+.overflow-x-auto #edit {
+    color: orangered;
+    font-size: 20px;
+}
+.overflow-x-auto #hapus {
+    font-size: 18px;
+    color: red;
+}
+
+/* ===== Responsive Styles ===== */
+@media screen and (max-width: 600px) {
+    #desktop {
+        display: none;
+    }
+    #mobile {
+        display: block;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .menus {
+        gap: 15px;
+    }
+    .menus .data {
+        min-height: auto;
+        padding: 12px;
+    }
+}
